@@ -1,0 +1,113 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.custom-toolbar {
+  height: 120px; /* Memberi cukup ruang untuk judul dan sub-judul */
+  --ion-toolbar-background: #f8f9fa; /* Opsi untuk mengganti warna latar belakang jika diperlukan */
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 25px; /* Ukuran font untuk judul utama */
+  font-weight: bold;
+}
+
+.sub-title {
+  font-size: 12px; /* Ukuran font untuk sub-judul */
+  margin-top: 4px; /* Jarak antara judul dan sub-judul */
+  color: grey; /* Warna opsional */
+}
+
+.category-wrapper {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.custom-select-item {
+  width: 90%;
+  --background: transparent;
+  --border-color: #8a94a4; /* Warna outline */
+  --border-width: 2px;
+  --border-radius :8px;
+  --padding-start: 10px;
+
+}
+
+.custom-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: #3880ff; /* Warna teks */
+  background-color: transparent;
+}
+
+.custom-select::part(placeholder) {
+  color: #3880ff; /* Warna placeholder */
+}
+
+.custom-select-item ion-label {
+  color: #3880ff; /* Warna label */
+  font-weight: bold;
+}
+
+.custom-select-item .custom-select {
+  --padding-start: 12px;
+  --padding-end: 12px;
+}
+
+.convert-wrapper {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+ion-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0px;
+}

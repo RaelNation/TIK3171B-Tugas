@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <div class="title-wrapper">
+      <ion-title class="main-title">Universal Converter</ion-title>
+      <br><br><br>
+      <ion-text class="sub-title">By: Rangian Elroi Johanes</ion-text>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="ion-padding">
+  <div class="category-wrapper">
+    <!-- Kategori Satuan -->
+    <ion-item class="custom-select-item">
+      <ion-label position="stacked">Select Category</ion-label>
+      <ion-select [(ngModel)]="selectedCategory" (ionChange)="updateUnits()">
+        <ion-select-option value="length">Length</ion-select-option>
+        <ion-select-option value="mass">Mass</ion-select-option>
+        <ion-select-option value="time">Time</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  
+  <div class="convert-wrapper">
+    <ion-grid>
+      <ion-row justify-content-center align-items-center>
+        <ion-col size="6" size-md="4" size-lg="2">
+           <!-- From Unit Dropdown -->
+          <ion-item class="custom-select-item" *ngIf="units.length > 0">
+            <ion-label position="stacked">From unit</ion-label>
+              <ion-select [(ngModel)]="fromUnit" (ionChange)="convertUnits()">
+                <ion-select-option *ngFor="let unit of units" [value]="unit">{{ unit }}</ion-select-option>
+              </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6" size-md="4" size-lg="2">
+          <!-- To Unit Dropdown -->
+          <ion-item  class="custom-select-item" *ngIf="units.length > 0">
+            <ion-label position="stacked">To unit</ion-label>
+              <ion-select [(ngModel)]="toUnit" (ionChange)="convertUnits()">
+                <ion-select-option *ngFor="let unit of units" [value]="unit">{{ unit }}</ion-select-option>
+              </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6" size-md="4" size-lg="2">
+          <!-- Input Value -->
+          <ion-item class="custom-select-item">
+            <ion-label position="stacked">Enter value</ion-label>
+              <ion-input [(ngModel)]="inputValue" type="number" placeholder="Enter value"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6" size-md="4" size-lg="2">
+            <!-- Display Converted Value -->
+            <ion-item class="custom-select-item" >
+              <ion-label>
+                Converted Value:
+                <br>
+                {{ convertedValue }}
+              </ion-label>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+</ion-content>
